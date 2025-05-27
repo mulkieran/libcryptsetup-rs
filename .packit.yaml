@@ -40,7 +40,7 @@ srpm_build_deps:
 
 jobs:
   - job: copr_build
-    trigger: pull_request
+    trigger: [ pull_request, commit ]
     targets:
       - fedora-all
 
