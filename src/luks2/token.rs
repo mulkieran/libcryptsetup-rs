@@ -222,7 +222,7 @@ impl<'a> CryptLuks2TokenHandle<'a> {
         ));
         if rc == 0 {
             Ok(true)
-        } else if rc == libc::ENOENT {
+        } else if rc == -libc::ENOENT {
             Ok(false)
         } else {
             Err(LibcryptErr::IOError(std::io::Error::from_raw_os_error(-rc)))
