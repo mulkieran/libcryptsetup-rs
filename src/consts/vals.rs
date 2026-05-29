@@ -343,7 +343,7 @@ impl TryFrom<u64> for KeyslotsSize {
 
     fn try_from(v: u64) -> Result<Self, Self::Error> {
         // Must be divisible by 4KB and less than or equal to 128MB
-        if v > Self::MAX_MB || v % Self::FOUR_KB != 0 {
+        if v > Self::MAX_MB || !v.is_multiple_of(Self::FOUR_KB) {
             return Err(LibcryptErr::InvalidConversion);
         }
 
