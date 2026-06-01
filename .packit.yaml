@@ -45,7 +45,7 @@ jobs:
     trigger: pull_request
     identifier: copr_pull
     additional_repos:
-      - copr://packit/stratis-storage-libcryptsetup-rs-484
+      - copr://packit/stratis-storage-libcryptsetup-rs-489
     targets:
       - fedora-all
 
@@ -53,7 +53,7 @@ jobs:
     trigger: commit
     identifier: copr_commit
     additional_repos:
-      - copr://packit/stratis-storage-libcryptsetup-rs-484
+      - copr://packit/stratis-storage-libcryptsetup-rs-489
     preserve_project: true
     targets:
       - fedora-all
