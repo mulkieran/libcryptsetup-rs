@@ -1,3 +1,18 @@
+libcryptsetup-rs 0.16.1
+=======================
+Recommended development environment: Fedora 43
+
+- Fix error code in is_assigned:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/483
+
+- Increase lowest supported rust toolchain to 1.87.0:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/488
+
+- Tidies and Maintenance:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/487
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/486
+
+
 libcryptsetup-rs 0.16.0
 =======================
 Recommended development environment: Fedora 43
