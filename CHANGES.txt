@@ -2,6 +2,9 @@ libcryptsetup-rs 0.16.1
 =======================
 Recommended development environment: Fedora 43
 
+- libcryptsetup-rs-sys: Release version 0.7.0:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/492
+
 - Use bindgen enhancements to remove manually defined constants:
   https://github.com/stratis-storage/libcryptsetup-rs/pull/484
 
