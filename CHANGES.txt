@@ -2,6 +2,9 @@ libcryptsetup-rs 0.16.1
 =======================
 Recommended development environment: Fedora 43
 
+- Use bindgen enhancements to remove manually defined constants:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/484
+
 - Fix error code in is_assigned:
   https://github.com/stratis-storage/libcryptsetup-rs/pull/483
 
@@ -9,6 +12,7 @@ Recommended development environment: Fedora 43
   https://github.com/stratis-storage/libcryptsetup-rs/pull/488
 
 - Tidies and Maintenance:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/490
   https://github.com/stratis-storage/libcryptsetup-rs/pull/487
   https://github.com/stratis-storage/libcryptsetup-rs/pull/486
 
