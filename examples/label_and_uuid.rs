@@ -1,6 +1,6 @@
 use std::{env::args, error::Error, path::Path};
 
-use libcryptsetup_rs::{consts::vals::EncryptionFormat, CryptInit, LibcryptErr};
+use libcryptsetup_rs::{CryptInit, LibcryptErr, consts::vals::EncryptionFormat};
 use uuid::Uuid;
 
 fn main() -> Result<(), Box<dyn Error>> {

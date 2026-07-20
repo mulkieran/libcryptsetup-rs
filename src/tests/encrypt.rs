@@ -12,6 +12,7 @@ use std::{
 };
 
 use crate::{
+    Either,
     consts::{
         flags::{CryptActivate, CryptDeactivate, CryptKeyfile, CryptVolumeKey},
         vals::EncryptionFormat,
@@ -19,7 +20,6 @@ use crate::{
     device::CryptInit,
     err::LibcryptErr,
     tests::loopback,
-    Either,
 };
 
 use libc::c_uint;

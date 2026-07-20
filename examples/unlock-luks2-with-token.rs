@@ -6,8 +6,8 @@ use std::{
 
 use libc::syscall;
 use libcryptsetup_rs::{
-    consts::{flags::CryptActivate, vals::EncryptionFormat},
     CryptInit, LibcryptErr,
+    consts::{flags::CryptActivate, vals::EncryptionFormat},
 };
 
 fn usage() -> &'static str {

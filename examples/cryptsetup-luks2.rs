@@ -9,11 +9,11 @@ use std::{
 };
 
 use libcryptsetup_rs::{
+    CryptInit, LibcryptErr,
     consts::{
         flags::{CryptActivate, CryptDeactivate, CryptVolumeKey},
         vals::EncryptionFormat,
     },
-    CryptInit, LibcryptErr,
 };
 
 enum CryptCommand {
@@ -33,7 +33,7 @@ fn parse_args() -> Result<CryptCommand, LibcryptErr> {
                 None => {
                     return Err(LibcryptErr::Other(
                         "Device path for device to be encrypted is required".to_string(),
-                    ))
+                    ));
                 }
             });
             if dev.exists() {
@@ -50,7 +50,7 @@ fn parse_args() -> Result<CryptCommand, LibcryptErr> {
                 None => {
                     return Err(LibcryptErr::Other(
                         "Device path for device to be opened is required".to_string(),
-                    ))
+                    ));
                 }
             });
             if !dev.exists() {
@@ -69,7 +69,7 @@ fn parse_args() -> Result<CryptCommand, LibcryptErr> {
                 None => {
                     return Err(LibcryptErr::Other(
                         "Device path for device to be closed is required".to_string(),
-                    ))
+                    ));
                 }
             });
             if !dev.exists() {

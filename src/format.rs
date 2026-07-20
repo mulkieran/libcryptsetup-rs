@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 use std::{
-    ffi::{c_void, CString},
+    ffi::{CString, c_void},
     os::raw::c_uint,
     path::PathBuf,
     ptr, slice,

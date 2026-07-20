@@ -67,11 +67,7 @@ macro_rules! try_int_to_return {
 macro_rules! ptr_to_option {
     ( $ptr:expr ) => {{
         let p = $ptr;
-        if p.is_null() {
-            None
-        } else {
-            Some(p)
-        }
+        if p.is_null() { None } else { Some(p) }
     }};
 }
 
@@ -85,9 +81,7 @@ macro_rules! ptr_to_option_with_reference {
 
 /// Convert a pointer to an `Result` containing a pointer
 macro_rules! ptr_to_result {
-    ( $ptr:expr ) => {{
-        ptr_to_option!($ptr).ok_or($crate::err::LibcryptErr::NullPtr)
-    }};
+    ( $ptr:expr ) => {{ ptr_to_option!($ptr).ok_or($crate::err::LibcryptErr::NullPtr) }};
 }
 
 /// Convert a pointer to a `Result` containing a reference

@@ -2,7 +2,7 @@ use std::{env, fs::File, io::Write, path::PathBuf};
 
 use super::loopback;
 
-use crate::{consts::flags::CryptKeyfile, CryptInit};
+use crate::{CryptInit, consts::flags::CryptKeyfile};
 
 pub fn test_keyfile_cleanup() {
     loopback::use_loopback(

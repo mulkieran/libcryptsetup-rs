@@ -60,12 +60,12 @@ pub use crate::{
     luks2::{
         flags::CryptLuks2FlagsHandle,
         reencrypt::{CryptLuks2ReencryptHandle, CryptParamsReencrypt, CryptParamsReencryptRef},
-        token::{register, CryptLuks2TokenHandle, CryptTokenInfo, TokenInput},
+        token::{CryptLuks2TokenHandle, CryptTokenInfo, TokenInput, register},
     },
     mem::SafeMemHandle,
     runtime::{ActiveDevice, CryptRuntimeHandle},
     settings::{CryptPbkdfType, CryptPbkdfTypeRef, CryptSettingsHandle},
-    status::{get_sector_size, status, CryptDeviceStatusHandle},
+    status::{CryptDeviceStatusHandle, get_sector_size, status},
     wipe::CryptWipeHandle,
 };
 
