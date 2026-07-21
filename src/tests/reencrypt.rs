@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 use crate::{
+    CryptParamsLuks2, CryptParamsReencrypt, Either,
     consts::{
         flags::{CryptActivate, CryptDeactivate, CryptReencrypt, CryptVolumeKey},
         vals::{CryptReencryptDirectionInfo, CryptReencryptModeInfo, EncryptionFormat},
@@ -10,7 +11,6 @@ use crate::{
     device::CryptInit,
     get_sector_size,
     tests::loopback,
-    CryptParamsLuks2, CryptParamsReencrypt, Either,
 };
 
 pub fn test_reencrypt_by_password() {

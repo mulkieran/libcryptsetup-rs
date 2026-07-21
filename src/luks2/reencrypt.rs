@@ -8,7 +8,7 @@ use std::{
     ptr,
 };
 
-use libcryptsetup_rs_sys::{crypt_params_reencrypt, CRYPT_ANY_SLOT};
+use libcryptsetup_rs_sys::{CRYPT_ANY_SLOT, crypt_params_reencrypt};
 
 use crate::{
     consts::{

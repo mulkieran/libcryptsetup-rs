@@ -30,19 +30,19 @@ mod test {
 
     #[test]
     fn test_format_with_zeros() {
-        std::env::remove_var("FORMAT_WITH_ZEROS");
+        unsafe { std::env::remove_var("FORMAT_WITH_ZEROS") };
         assert!(format_with_zeros());
-        std::env::set_var("FORMAT_WITH_ZEROS", "false");
+        unsafe { std::env::set_var("FORMAT_WITH_ZEROS", "false") };
         assert!(!format_with_zeros());
-        std::env::remove_var("FORMAT_WITH_ZEROS");
+        unsafe { std::env::remove_var("FORMAT_WITH_ZEROS") };
     }
 
     #[test]
     fn test_do_cleanup() {
-        std::env::remove_var("DO_CLEANUP");
+        unsafe { std::env::remove_var("DO_CLEANUP") };
         assert!(do_cleanup());
-        std::env::set_var("DO_CLEANUP", "false");
+        unsafe { std::env::set_var("DO_CLEANUP", "false") };
         assert!(!do_cleanup());
-        std::env::remove_var("DO_CLEANUP");
+        unsafe { std::env::remove_var("DO_CLEANUP") };
     }
 }

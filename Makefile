@@ -55,7 +55,7 @@ release:
 	cargo build --release
 
 test:
-	RUST_BACKTRACE=1 cargo test -- --skip test_mutex_poisoning_panic
+	RUST_BACKTRACE=1 RUST_TEST_THREADS=1 cargo test -- --skip test_mutex_poisoning_panic
 
 test-mutex:
 	RUST_BACKTRACE=1 cargo test --features=mutex -- --skip test_mutex_poisoning_panic
