@@ -23,6 +23,9 @@ audit:
 check-typos:
 	typos
 
+fix-typos:
+	typos -w
+
 build:
 	cargo ${BUILD}
 
@@ -79,6 +82,7 @@ yamllint:
 	clippy
 	docs-rust
 	docs-ci
+	fix-typos
 	fmt
 	fmt-ci
 	release
