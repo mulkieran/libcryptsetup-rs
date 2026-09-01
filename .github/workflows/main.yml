@@ -96,23 +96,15 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Install git
-        run: sudo apt-get install git
-      - name: Install toml-cli
-        run: pip install --user toml-cli
+        run: sudo apt-get install git jq
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - name: Install dependencies
+        run: sudo apt-get install ${{ matrix.dependencies }}
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - name: Get package MSRV
-        id: msrv
-        run: |
-          PATH="$PATH:$(python3 -m site --user-base)/bin" MSRV=$(toml get --toml-path Cargo.toml "package.rust-version")
-          echo "MSRV=$MSRV" >> "$GITHUB_OUTPUT"
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          toolchain: ${{ steps.msrv.outputs.MSRV }}
-      - name: Install dependencies
-        run: >
-          sudo apt-get install ${{ matrix.dependencies }}
+      - name: Set toolchain to MSRV
+        uses: stratis-storage/github-actions/set-rust-toolchain@HEAD
       - name: Test ${{ matrix.task }} on LOWEST SUPPORTED RUST TOOLCHAIN
         run: ${{ matrix.task }}
 
@@ -205,22 +197,15 @@ jobs:
       options: --privileged -v /dev:/dev
     steps:
       - name: Install git
-        run: dnf install -y git python3-pip
-      - name: Install toml-cli
-        run: pip install --user toml-cli
+        run: dnf install -y git jq
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - name: Get package MSRV
-        id: msrv
-        run: |
-          PATH="$PATH:$(python3 -m site --user-base)/bin" MSRV=$(toml get --toml-path Cargo.toml "package.rust-version")
-          echo "MSRV=$MSRV" >> "$GITHUB_OUTPUT"
       - uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          toolchain: ${{ steps.msrv.outputs.MSRV }}
       - name: Install dependencies
         run: dnf install -y make gcc clang-devel ${{ matrix.dependencies }}
+      - name: Set toolchain to MSRV
+        uses: stratis-storage/github-actions/set-rust-toolchain@HEAD
       - name: Test ${{ matrix.task }} on LOWEST SUPPORTED RUST TOOLCHAIN
         run: ${{ matrix.task }}
 
