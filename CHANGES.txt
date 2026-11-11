@@ -1,3 +1,35 @@
+libcryptsetup-rs 0.16.2
+=======================
+Recommended development environment: Fedora 44
+
+- Increase Rust edition to 2024:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/497
+
+- Increase MSRV to 1.89.0:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/512
+
+- Increase rand dependency lower bound to 0.10.1:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/505
+
+- Increase base64 dependency lower bound to 0.23.0:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/501
+
+- Tidies and Maintenance:
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/511
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/509
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/508
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/507
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/506
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/504
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/503
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/502
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/500
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/499
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/498
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/496
+  https://github.com/stratis-storage/libcryptsetup-rs/pull/495
+
+
 libcryptsetup-rs 0.16.1
 =======================
 Recommended development environment: Fedora 43
